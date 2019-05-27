@@ -32,6 +32,7 @@
              unique-opened>
       <template v-for="(item, index) in items"
                 v-if="!item.hidden">
+        <!-- Nested menu -->
         <el-menu-item v-if="!item.children"
                       :key="index"
                       :index="item.path"

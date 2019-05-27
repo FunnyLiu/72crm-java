@@ -7,6 +7,7 @@
     <el-container>
       <el-aside width="auto"
                 class="aside-container">
+        <!-- get router with permission -->
         <sidebar :items="crmRouters.children"
                  :addOffset="quickAddOffset"
                  createButtonTitle="快速创建"

@@ -7,6 +7,7 @@
                      main-title="新建商机"
                      :crm-type="crmType">
     </c-r-m-list-head>
+    <!-- precise control of permissions -->
     <div v-empty="!crm.business.index"
          xs-empty-icon="nopermission"
          xs-empty-text="暂无权限"

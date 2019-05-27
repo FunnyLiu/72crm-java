@@ -12,9 +12,11 @@ function checkAuth(router, authInfo) {
   // 判断当前路由在权限数组中是否存在
   if (router.meta) {
     const metaInfo = router.meta
+    //if meta info did not indicate the need for persmission control
     if (!metaInfo.requiresAuth) {
       return true
     } else {
+      //judging the permissons under multi-level routing
       if (metaInfo.index == 0) {
         return authInfo[metaInfo.type] ? true : false
       } else if (metaInfo.index == 1) {

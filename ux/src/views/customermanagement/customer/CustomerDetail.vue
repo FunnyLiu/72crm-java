@@ -152,6 +152,7 @@ export default {
     },
     tabnames() {
       var tempsTabs = []
+      // precise control of permissions
       tempsTabs.push({ label: '跟进记录', name: 'followlog' })
       if (this.crm.customer && this.crm.customer.read) {
         tempsTabs.push({ label: '基本信息', name: 'basicinfo' })
