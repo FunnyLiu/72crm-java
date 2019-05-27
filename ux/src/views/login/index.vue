@@ -37,11 +37,6 @@
           </el-button>
         </el-form-item>
       </el-form>
-      <div class="copyright">
-        悟空CRM受国家计算机软件著作权保护，未经授权不得进行商业行为，违者必究。<br>
-        ©2019 悟空软件<a target="_blank"
-           href="http://www.5kcrm.com">www.5kcrm.com</a>
-      </div>
     </div>
 
     <img class="logo"
@@ -90,6 +85,7 @@ export default {
   watch: {
     $route: {
       handler: function(route) {
+        //Remember the last path
         this.redirect = route.query && route.query.redirect
       },
       immediate: true
@@ -103,12 +99,14 @@ export default {
     handleLogin() {
       this.$refs.loginForm.validate(valid => {
         if (valid) {
+          //this loading property is used for button components
           this.loading = true
           this.$store
             .dispatch('Login', this.loginForm)
             .then(res => {
               this.loading = false
               this.$store.dispatch('SystemLogoAndName')
+              //If there is a previous path, then jump to it, otherwise go to the homepage
               this.$router.push({ path: this.redirect || '/workbench/index' })
             })
             .catch(() => {

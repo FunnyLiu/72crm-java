@@ -149,6 +149,11 @@ export default {
       this.collapse = !this.collapse
       this.$root.eventHub.$emit('collapseBtn', this.collapse)
     },
+    /**
+     * click menu item to change route
+     * 
+     * @param {string} key Secondary route name
+     */
     menuSelect(key, keyPath) {
       this.$router.push('/' + this.mainRouter + '/' + key)
     },

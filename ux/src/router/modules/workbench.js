@@ -3,6 +3,7 @@ import Layout from '@/views/layout/workbenchLayout'
 
 const workbenchRouter = {
   path: '/workbench',
+  //Layout Component inject in here
   component: Layout,
   redirect: '/workbench/index',
   name: 'workbench',

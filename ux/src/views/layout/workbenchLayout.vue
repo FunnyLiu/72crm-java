@@ -29,6 +29,7 @@
         <app-main></app-main>
       </el-main>
     </el-container>
+    <!-- create approval category select modal -->
     <examine-category-select :show="showCategorySelect"
                              @select="selcetExamineCategory"
                              @close="showCategorySelect=false"></examine-category-select>
@@ -48,7 +49,9 @@ import ExamineCategorySelect from '@/views/OAManagement/examine/components/exami
 export default {
   name: 'Layout',
   components: {
+    //head layout ui
     Navbar,
+    //side layout ui
     Sidebar,
     AppMain,
     ExamineCategorySelect,
@@ -99,6 +102,7 @@ export default {
     navClick(index) {},
     // 新增跳转
     addSkip(val) {
+      //handle nav router redirect     
       switch (val.label) {
         case '日志':
           this.$router.push({ path: 'journal', query: { routerKey: 1 } })

@@ -88,6 +88,7 @@ export default {
         path: '/workbench',
         icon: 'workbench'
       })
+      //auth control
       if (this.crm) {
         tempsItems.push({
           title: '客户管理',
@@ -96,6 +97,7 @@ export default {
           icon: 'customer'
         })
       }
+      //auth control
       if (this.bi) {
         tempsItems.push({
           title: '商业智能',

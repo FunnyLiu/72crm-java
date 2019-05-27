@@ -10,6 +10,9 @@
 </template>
 
 <script>
+/**
+ * common flexible box component
+ */
 export default {
   name: 'flexbox',
   props: {

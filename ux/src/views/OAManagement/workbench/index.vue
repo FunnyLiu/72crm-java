@@ -10,6 +10,7 @@
                      :key="index">
           <tab-journal v-if="activeName == '1'"
                        :journalData="listData">
+            <!-- slot load component to it -->
             <p class="load"
                slot="load">
               <el-button type="text"
